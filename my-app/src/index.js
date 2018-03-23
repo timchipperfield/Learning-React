@@ -9,7 +9,15 @@ registerServiceWorker();
 
 function Square(props) {
   return (
-    <button className={"square btn " + props.value + '-class'} onClick={() => props.onClick()}>
+    <button className={"square " + props.value + '-class'} onClick={() => props.onClick()}>
+      {props.value}
+    </button>
+  );
+}
+
+function Reset(props) {
+  return (
+    <button className={"reset-class"} onClick={() => props.onClick()}>
       {props.value}
     </button>
   );
@@ -42,6 +50,18 @@ class Board extends React.Component {
       <Square
         value={this.state.squares[i]}
         onClick={() => this.handleClick(i)}
+      />
+    );
+  }
+
+  renderReset() {
+    return (
+      <Reset
+        value="Reset Game"
+        onClick={() => this.setState({
+            squares: Array(9).fill(null)
+          })
+        }
       />
     );
   }
@@ -103,6 +123,7 @@ class Board extends React.Component {
             {this.renderSquare(8)}
           </div>
         </div>
+        <div className="resetButton">{this.renderReset()}</div>
       </div>
     );
   }
@@ -114,10 +135,6 @@ class Game extends React.Component {
       <div className="game">
         <div className="game-board">
           <Board />
-        </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
         </div>
       </div>
     );
