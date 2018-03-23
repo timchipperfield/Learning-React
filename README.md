@@ -8,4 +8,4 @@ b) Orient yourself into the my-app folder
 c) Type 'npm start' - this should open a browser window with the game, ready to play.
 
 # Screenshot
-![alt text](http://game-screenshot.png)
+![game screenshot](https://github.com/timchipperfield/React-Tic-Tac-Toe/blob/master/game-screenshot.png)
