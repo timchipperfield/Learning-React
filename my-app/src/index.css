@@ -1,8 +1,60 @@
 body {
-  margin: 10;
+  margin-top: 2%;
   padding: 0;
   font-family: sans-serif;
 }
 
 .square {
+  resize: none;
+  width: 167px;
+  height: 167px;
+  font-size: 60px;
+  vertical-align: top;
+  display: inline-block;
+  border: 1px solid white;
+}
+
+.square:hover {
+  color: white;
+}
+
+.square:focus {outline:0;}
+
+.board-row {
+  display:block;
+  min-height: 168px;
+  max-height: 168px;
+}
+
+.board {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 501px;
+  height: 501px;
+}
+
+.status {
+  margin-bottom: 1%;
+  background-color: #fdd4b2;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 501px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.X-class {
+  background-color: #fec2b5;
+}
+
+.O-class {
+	background-color: #a7e6ff;
+}
+
+.null-class {
+  background-color: #bafcb4;
 }
